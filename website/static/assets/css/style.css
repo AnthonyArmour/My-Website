@@ -141,78 +141,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/*--------------------------------------------------------------
-# projects
---------------------------------------------------------------*/
-/* .projects .projects-title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #45505b;
-}
-.projects .projects-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid var(--primary-color);
-  position: relative;
-}
-.projects .projects-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-.projects .projects-item h5 {
-  font-size: 16px;
-  background: #f7f8f9;;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.projects .projects-item #hero1, .projects .projects-item #files-manager,
-.projects .projects-item #react {
-  max-width: 100% !important;
-}
-.projects .projects-item a {
-	color: var(--primary-color) !important;
-	border-color: var(--primary-color) !important;
-}
-.projects .projects-item a:hover {
-	color: var(--primary-color) !important;
-	border-color: var(--primary-color) !important;
-	background-color: white !important;
-}
-.projects .projects-item ul {
-  padding-left: 2px;
-}
-.projects .projects-item ul li {
-  font-size: 14px;
-}
-.projects .projects-item ul > li {
-	display: inline-block;
-}
-.projects .projects-item:last-child {
-  padding-bottom: 0;
-}
-.projects .projects-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid var(--primary-color);
-} */
-
-
-
-
 
 
 .project .project-title {
@@ -265,6 +193,107 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   border: 2px solid #0563bb;
 }
+
+
+/*--------------------------------------------------------------
+# TicTacToe
+--------------------------------------------------------------*/
+
+#enemy-screen,
+#intro-screen {
+  max-width: 420px;
+  text-align: center;
+}
+#enemy-screen h2,
+#intro-screen h2 {
+  padding: 0 15px;
+}
+#intro-screen button {
+  font-size: 3.4em;
+  padding: 3% 6%;
+  margin: 0 4%;
+}
+#enemy-screen button {
+  display: block;
+  margin: 0.6em auto;
+  font-size: 1.9em;
+  padding: 0.2em 0.4em;
+}
+
+/****** GAME GRID ******/
+
+
+table {
+  max-width: 420px;
+  max-height: 420px;
+  width: 85vw;
+  height: 85vw;
+  border-spacing: 4px 2px;
+  /* border: 1px solid #067ded; */
+}
+td {
+  padding: 0;
+  width: 33%;
+  height: 33%;
+  /* border: 1px solid #067ded; */
+}
+.cell {
+  font-size: 1em;
+  font-size: 8vmin;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #067ded;
+}
+.wincell {
+  background-color: #5cb0ff;
+}
+.player-two {
+  color: #0563bb;
+}
+
+/****** BUTTONS ******/
+
+
+button {
+  cursor: pointer;
+  border: none;
+  color: #0563bb;
+}
+
+#restart {
+  font-size: 1.2em;
+  padding: 5px 10px;
+  margin: 20px auto;
+  display: block;
+}
+
+.choose,
+#restart {
+  border-radius: 0.3em;
+}
+.choose:active,
+#restart:active {
+  background-color: #ccc;
+}
+
+.btn-green {
+  background-color: #eaf5fe;
+}
+.btn-green:active {
+  background-color: #afd8ff !important;
+}
+
+
+.center {
+  margin: 0 auto;
+}
+.hidden {
+  display: none;
+}
+.cannotuse {
+  cursor: not-allowed;
+}
+
 
 
 /*--------------------------------------------------------------
