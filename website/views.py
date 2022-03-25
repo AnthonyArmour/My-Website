@@ -3,7 +3,7 @@ import numpy as np
 from .backend.TicTacToe import TicTacToe, Node, MCTS
 
 
-def get_root_node(games=10):
+def get_root_node(games=25):
     nd = Node()
 
     for i in range(games):
@@ -36,7 +36,7 @@ def home():
 @views.route('/create_agent')
 def create_agent():
     uid = str(np.random.randint(9999))
-    agents[uid] = MCTS(node, iterations=100)
+    agents[uid] = MCTS(node, iterations=200)
     games[uid] = TicTacToe()
     # print("Created id: ", uid)
     return jsonify({"data": uid})
