@@ -3,7 +3,7 @@ import numpy as np
 from .backend.TicTacToe import TicTacToe, Node, MCTS
 
 
-def get_root_node(games=25):
+def get_root_node(games=30):
     nd = Node()
 
     for i in range(games):
@@ -22,6 +22,7 @@ views = Blueprint('views', __name__)
 
 # class App():
 # app = Flask(__name__)
+
 data = np.arange(9)
 node = get_root_node()
 agents = {}
@@ -70,3 +71,11 @@ def cpu_mv(uid):
     move = np.argwhere(board == move)[0]
     move = str(move[0]) + str(move[1])
     return jsonify({"data": move})
+
+# @views.route('/site_views')
+# def my_views():
+#     return "\nTotal site views: ".format(site_views)
+
+# @views.route('/game_plays')
+# def games_played():
+#     return "\nTotal games played: ".format(plays)
